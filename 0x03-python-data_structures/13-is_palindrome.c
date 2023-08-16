@@ -5,6 +5,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *c;
+	listint_t *cv;
 	int n = 0;
 	int c_size = 1;
 	int *arr = malloc(sizeof(int) * c_size);
@@ -13,7 +14,7 @@ int is_palindrome(listint_t **head)
 	int j;
 
 	c = *head;
-	listint_t *cv = *head;
+	cv = *head;
 
 	if (*head == NULL)
 		return (1);
