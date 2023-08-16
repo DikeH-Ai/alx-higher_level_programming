@@ -12,4 +12,6 @@ if __name__ == "__main__":
         sys.exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    print("{} {} {} = {}".format(a, sys.argv[2], b, a + b))
+    op = {'+': calculator_1.add, '-': calculator_1.sub,
+          '*': calculator_1.mul, '/': calculator_1.div}
+    print("{} {} {} = {}".format(a, sys.argv[2], b, op[sys.argv[2]](a, b)))
