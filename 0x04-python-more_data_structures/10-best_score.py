@@ -2,6 +2,7 @@
 def best_score(a_dictionary):
     max_stud = 0
     if a_dictionary is None:
+        a_dictionary = {}
         return None
 
     for x, y in a_dictionary.items():
@@ -12,4 +13,4 @@ def best_score(a_dictionary):
 
 
 if __name__ == "__main__":
-    best_score(a_dictionary)
+    best_score(a_dictionary={})
