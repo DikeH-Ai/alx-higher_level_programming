@@ -6,9 +6,11 @@ def safe_print_list_integers(my_list=[], x=0):
             if type(i) is int:
                 print("{:d}".format(i), end='')
                 real_number += 1
-        print()
         return real_number
+    except (IndexError, TypeError):
+        pass
     finally:
+        print()
         return real_number
 
 
