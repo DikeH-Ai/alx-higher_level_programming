@@ -13,9 +13,9 @@ def list_division(my_list_1, my_list_2, list_length):
                 print("out of range")
             except TypeError:
                 final_list.append(0)
-                print("wrong type")    
+                print("wrong type")
     finally:
-            return final_list
+        return final_list
 
 
 if __name__ == "__main__":
