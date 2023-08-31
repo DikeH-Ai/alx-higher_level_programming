@@ -8,8 +8,6 @@ def safe_print_list_integers(my_list=[], x=0):
                 real_number += 1
         print()
         return real_number
-    except IndexError:
-        print("Out of range")
     finally:
         return real_number
 
