@@ -64,6 +64,7 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
 
     def __str__(self):
+        """Return string rep """
         rect = ""
         if (self.__height == 0) or (self.__width == 0):
             return ""
@@ -72,5 +73,3 @@ class Rectangle:
             rect += rect_char * self.__width + "\n"
         return rect
 
-     def __repr__(self):
-        return f"Rectangle({str({self.__width})}, {str({self.__height})})"
