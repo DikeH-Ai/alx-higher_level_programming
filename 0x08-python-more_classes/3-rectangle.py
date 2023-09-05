@@ -65,17 +65,10 @@ class Rectangle:
 
     def __str__(self):
         """Return string rep """
-        rect = ""
+        rect_row = ""
         if (self.__height == 0) or (self.__width == 0):
             return ""
         rect_char = '#'
-        for _ in range(self.__height):
-            rect += rect_char * self.__width + "\n"
+        rect_row = rect_char * self.__width
+        rect = (rect_row + "\n") * (self.__height - 1) + rect_row
         return rect
-
-    def __repr__(self):
-        """Returns repr fmt string"""
-        repr_fmt = ""
-        repr_fmt += "Rectangle(" + str(self.__width) + ", "
-        repr_fmt += str(self.__width) + ")"
-        return repr_fmt
