@@ -73,3 +73,9 @@ class Rectangle:
             rect += rect_char * self.__width + "\n"
         return rect
 
+    def __repr__(self):
+        """Returns repr fmt string"""
+        repr_fmt = ""
+        repr_fmt += "Rectangle(" + str(self.__width) + ", "
+        repr_fmt += str(self.__width) + ")"
+        return repr_fmt
