@@ -8,7 +8,16 @@ class Rectangle:
         """
         This is a docstring for the constructor (__init__) method.
         """
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
         self.__height = height
+
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
         self.__width = width
 
     @property
@@ -60,7 +69,5 @@ class Rectangle:
             return ""
         rect_char = '#'
         for _ in range(self.__height):
-            for _ in range(self.__width):
-                rect += rect_char
-            rect += '\n'
+            rect += rect_char * self.__width + "\n"
         return rect
