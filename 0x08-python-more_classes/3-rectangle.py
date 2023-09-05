@@ -64,6 +64,7 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
 
     def __str__(self):
+        """Return expression rep"""
         rect = ""
         if (self.__height == 0) or (self.__width == 0):
             return ""
