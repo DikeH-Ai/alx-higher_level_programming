@@ -68,6 +68,10 @@ class Rectangle:
         else:
             return 2 * (self.__height + self.__width)
 
+    @classmethod
+    def square(cls, size=0):
+        return Rectangle(size, size)
+    
     def __str__(self):
         """Return string rep """
         rect_row = ""
@@ -104,12 +108,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """
-        returns a new Rectangle instance with width == height == size
-        Args:
-            size (int): New width and height value
-        """
-        return Rectangle(size, size)
