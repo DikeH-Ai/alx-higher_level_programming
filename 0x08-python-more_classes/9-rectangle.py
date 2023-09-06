@@ -70,8 +70,12 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        if not isinstance(size, int):
+            raise TypeError
+        if size < 0:
+            raise ValueError
         return Rectangle(size, size)
-    
+
     def __str__(self):
         """Return string rep """
         rect_row = ""
