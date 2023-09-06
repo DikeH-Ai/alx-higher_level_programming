@@ -75,4 +75,10 @@ class Rectangle:
 
     def __repr__(self):
         """Returns an expression in str format"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        rep_fmt = "Rectangle(" + str(self.__width)
+        rep_fmt += ", " + str(self.__height) + ")"
+        return rep_fmt
+
+    def __del__(self):
+        """detect the deletion of an instance of rectangle"""
+        print("Bye rectangle...")
