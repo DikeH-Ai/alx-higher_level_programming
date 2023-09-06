@@ -112,6 +112,4 @@ class Rectangle:
         Args:
             size (int): New width and height value
         """
-        if isinstance(size, int):
-            raise TypeError
-        return cls(size, size)
+        return Rectangle(size, size)
