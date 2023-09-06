@@ -114,4 +114,3 @@ class Rectangle:
             raise ValueError
 
         return cls(size, size)
-
