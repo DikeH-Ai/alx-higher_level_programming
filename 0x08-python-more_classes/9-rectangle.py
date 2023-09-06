@@ -113,5 +113,5 @@ class Rectangle:
         if size < 0:
             raise ValueError
 
-        rect_inst = cls(size, size)
-        return rect_inst
+        return cls(size, size)
+
