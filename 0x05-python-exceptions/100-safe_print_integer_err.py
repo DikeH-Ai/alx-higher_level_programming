@@ -4,11 +4,9 @@ import sys
 
 def safe_print_integer_err(value):
     try:
-        if not isinstance(value, int):
-            raise ValueError
         print("{:d}".format(value))
         return True
-    except ValueError as e:
+    except (ValueError, TypeError) as e:
         print(f"Exception: {e}", file=sys.stderr)
         return False
 
