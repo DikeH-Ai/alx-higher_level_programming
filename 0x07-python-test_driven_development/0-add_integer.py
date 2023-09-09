@@ -14,3 +14,6 @@ def add(a, b):
     :return: The sum of a and b.
     """
     return a + b
+
+if __name__ == "__main__":
+    add(a, b)
