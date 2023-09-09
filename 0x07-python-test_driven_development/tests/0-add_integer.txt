@@ -1,0 +1,55 @@
+>>> add(1, 2)
+3
+
+>>> add(1, -2)
+-1
+
+>>> add(1.4, 2)
+3.4
+
+>>> add(1, "2")
+Traceback (most recent call last):
+    ...
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+# Regular tests passed
+>>> add(3, 5)
+8
+
+# Test present: integer casting
+>>> add(1, int("2"))
+3
+
+# Test present: check type
+>>> add("1", 2)
+Traceback (most recent call last):
+    ...
+TypeError: unsupported operand type(s) for +: 'str' and 'int'
+
+# Test present: regular addition
+>>> add(2, 3)
+5
+
+# Test present: Float overflow
+>>> add(1.0e308, 1.0e308)
+Traceback (most recent call last):
+    ...
+OverflowError: (34, 'Result too large')
+
+# Test present: cannot convert float NaN to integer
+>>> add(float('nan'), 1)
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+# Test present: missing one argument
+>>> add(1)
+Traceback (most recent call last):
+    ...
+TypeError: add() missing 1 required positional argument: 'b'
+
+# Test present: missing two arguments
+>>> add()
+Traceback (most recent call last):
+    ...
+TypeError: add() missing 2 required positional arguments: 'a' and 'b'
