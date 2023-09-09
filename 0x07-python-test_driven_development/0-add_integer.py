@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This is a Python script with doctests to satisfy the checks in the report.
+Function fthat returns the addition of two integers
 """
 
 
