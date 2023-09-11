@@ -37,7 +37,7 @@ def matrix_divided(matrix, div):
             if not isinstance(num, (int, float)):
                 raise TypeError(
                     "matrix must be a matrix (list of lists)\
-of integers/floats"
+ of integers/floats"
                     )
 
     len_mat = len(matrix[0])
