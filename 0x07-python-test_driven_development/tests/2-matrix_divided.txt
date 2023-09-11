@@ -77,8 +77,4 @@ matrix remains the same
 
 >>> matrix_divided() #doctest: +ELLIPSIS
 Traceback (most recent call last):
-TypeError: matrix-divided() missing 2 required positional arguments:...
-
->>> matrix_divided() #doctest: +ELLIPSIS
-Traceback (most recent call last):
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
