@@ -72,6 +72,11 @@ matrix remains the same
 [[1, 2, 9], [4, 6, 10]]
 
 >>> matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
->>> div = float('inf')
->>> matrix_divided(matrix, div)
+>>> matrix_divided(matrix, float('inf'))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+>>> matrix_divided() #doctest: +ELLIPSIS
+TypeError: add_numbers() missing 2 required positional arguments:...
+
+>>> matrix_divided() #doctest: +ELLIPSIS
+TypeError: add_numbers() missing 1 required positional argument:...
