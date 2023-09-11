@@ -12,8 +12,8 @@ check with two arguments
 My name is Call Jeff
 
 without lastname
->>> say_my_name("Call")
-My name is Call
+>>> say_my_name("Jeff")
+My name is Jeff
 
 using digits
 >>> say_my_name(25.1, "Jeff")
