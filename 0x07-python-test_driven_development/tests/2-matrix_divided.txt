@@ -70,3 +70,8 @@ returned values must be rounded to 2 decimal places
 matrix remains the same
 >>> print(matrix)
 [[1, 2, 9], [4, 6, 10]]
+
+>>> matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+>>> div = float('inf')
+>>> matrix_divided(matrix, div)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
