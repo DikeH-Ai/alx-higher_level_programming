@@ -1,0 +1,48 @@
+The ``add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Test file for the add_integer function in the add_integer.py file
+    import module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    returns integer value
+    >>> add_integer(5, 4)
+    9
+
+    only accept integer or float value 
+    >>> add_integer("5", 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(5, "4")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    cast floats to integer
+    >>> add_integer(5.0, 5.0)
+    10
+
+    no value given
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    one value given
+    >>> add_integer(1)
+    99
+
+    convert float nan to int
+    >>> add_integer(1, float("NaN"))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer(85, None)     
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(5.0, float("inf"))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
