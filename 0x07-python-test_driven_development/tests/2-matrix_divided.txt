@@ -1,0 +1,72 @@
+The ``matrix divide`` module
+======================
+
+Using ``matrix divide``
+-------------------
+
+Funtion that divides all elements of a matrix.
+
+import function 
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+matrix must be a list of list
+>>> matrix_divided("this", 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(5, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+div must be a number (integer or float)
+>>> matrix = [
+... [1, 2, 3],
+... [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, "lol")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+div cannot be equal to zero
+>>> matrix = [
+... [1, 2, 9],
+... [4, 5, 10]
+... ]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+matrix must be a list of list with int/ float
+>>> matrix = []
+>>> matrix_divided(matrix, 4)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+matrix must have equal rows
+>>> matrix = [
+... [1, 2, 9],
+... [4, 5, 10]
+... ]
+>>> len(matrix[0]) == len(matrix[1])
+True
+
+>>> matrix = [
+... [1, 2, 9],
+... [4, 18, 9, 10]
+... ]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+returned values must be rounded to 2 decimal places
+>>> matrix = [
+... [1, 2, 9],
+... [4, 6, 10]
+... ]
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 4.5], [2.0, 3.0, 5.0]]
+
+matrix remains the same
+>>> print(matrix)
+[[1, 2, 9], [4, 6, 10]]
