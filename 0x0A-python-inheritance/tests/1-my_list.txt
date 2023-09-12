@@ -1,22 +1,36 @@
 TEST FOR MYLIST MODULE
 
 THE MYLIST MODULE
-IMPORTort it
 
- >>> MyList = __import__('1-my_list').MyList
- >>> my_list = MyList()
- >>> my_list.append(1)
- >>> my_list.append(4)
- >>> my_list.append(2)
- >>> my_list.append(3)
- >>> my_list.append(5)
- >>> my_list.print_sorted()
- >>> 2, 3, 4, 5]
+DOCTEST FOR MYLIST MODULE
 
- >>> my_list.append(4)
- >>> my_list.append(9)
- >>> my_list.append(2)
- >>> my_list.append(10)
- >>> my_list.append(5)
- >>> my_list.print_sorted()
- >>> 9, 2, 10, 5]
+
+import class from list
+>>> my_list = __import__('mylist').MyList
+
+does append work ?
+>>> a = my_list()
+>>> a.append(14)
+>>> print(a)
+[14]
+
+appends list
+>>> a.append("this")
+>>> print(a)
+[14, 'this']
+
+pop from list
+>>> a.pop()
+'this'
+>>> print(a)
+[14]
+
+>>> a[:] = 1, 2, 5, 131, 32, 78, 8, 45
+>>> print(a)
+[1, 2, 5, 131, 32, 78, 8, 45]
+
+>>> a.print_sorted()
+[1, 2, 5, 8, 32, 45, 78, 131]
+
+>>> len(a)
+8
