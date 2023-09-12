@@ -34,3 +34,27 @@ pop from list
 
 >>> len(a)
 8
+
+with no sorted append with negative number
+>>> neg = my_list()
+
+>>> neg.append(-1)
+>>> neg.append(-74)
+>>> neg.append(-21)
+>>> neg.append(-43)
+>>> neg.print_sorted()
+[-74, -43, -21, -1]
+
+check print_sorted() with empty list
+>>> neg[:] = []
+>>> neg.print_sorted()
+[]
+
+check print_sorted() returns a new list
+>>> c = my_list()
+>>> c[:] = 1,5,6,10
+>>> d = c.print_sorted()
+[1, 5, 6, 10]
+>>> print(d)
+None
+
