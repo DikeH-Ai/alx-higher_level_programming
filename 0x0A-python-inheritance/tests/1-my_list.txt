@@ -6,7 +6,7 @@ DOCTEST FOR MYLIST MODULE
 
 
 import class from list
->>> my_list = __import__('mylist').MyList
+>>> my_list = __import__('1-my_list').MyList
 
 does append work ?
 >>> a = my_list()
