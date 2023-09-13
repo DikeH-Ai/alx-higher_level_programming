@@ -1,0 +1,30 @@
+DOCTEST FOR BASE GEOMETRY
+
+USING 7-base_geometry
+
+import class
+>>> BG = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BG()
+
+call function without argument
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+>>> bg.integer_validator("my_int")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+value lest than 0
+>>> bg.integer_validator("my_int", -12)
+Traceback (most recent call last):
+ValueError: <name> must be greater than 0
+
+>>> bg.integer_validator("my_int", {6,7})
+Traceback (most recent call last):
+TypeError: <name> must be an integer
+
+>>> bg.integer_validator("my_int", True)
