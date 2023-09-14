@@ -21,12 +21,11 @@ class Student:
         if attrs is None:
             return student_dict
 
-        if all(isinstance(x, str) for x in attrs)\
-                and isinstance(attrs, list):
-            att_dict = [f"{key}: {value}"
-                        for key, value in student_dict.items()
-                        if key in attrs]
-
+        if ((isinstance(attrs, list))
+                and all(type(x) is str for x in attrs)):
+            att_dict = {key: getattr(self, key)
+                        for key in attrs
+                        if hasattr(self, key)}
             return att_dict
 
         return self.__dict__
