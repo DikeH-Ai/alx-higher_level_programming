@@ -23,9 +23,9 @@ class Student:
 
         if ((isinstance(attrs, list))
                 and all(type(x) is str for x in attrs)):
-            att_dict = [f"{key}: {value}"
+            att_dict = {f"{key}: {value}"
                         for key, value in student_dict.items()
-                        if key in attrs]
+                        if key in attrs}
 
             return att_dict
 
