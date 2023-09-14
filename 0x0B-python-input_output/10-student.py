@@ -21,7 +21,7 @@ class Student:
         if attrs is None:
             return student_dict
 
-        if (all(isinstance(x, str) for x in attrs)
+        if (all(type(x) is str for x in attrs)
                 and isinstance(attrs, list)):
             att_dict = [f"{key}: {value}"
                         for key, value in student_dict.items()
