@@ -1,0 +1,29 @@
+The ``text indentation`` module
+Using ``text indentation``
+
+import text function
+
+>>> txtind = __import__('5-text_indentation').text_indentation
+
+check function
+>>> txtind("Paul.")
+Paul.
+<BLANKLINE>
+
+new line format withhin strings
+>>> txtind("Who said what: John? Mary: No way.")
+Who said what:
+<BLANKLINE>
+John?
+<BLANKLINE>
+Mary:
+<BLANKLINE>
+No way.
+<BLANKLINE>
+
+print multiple new lines
+>>> txtind("\n\nDouble new line")
+<BLANKLINE>
+<BLANKLINE>
+Double new line
+
