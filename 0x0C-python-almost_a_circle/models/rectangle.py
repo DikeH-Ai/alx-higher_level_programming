@@ -33,14 +33,14 @@ class Rectangle(Base):
 
     @staticmethod
     def is_valid1(value, name=""):
-        if type(value) is int:
+        if type(value) != int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be > 0")
 
     @staticmethod
     def is_valid2(value, name=""):
-        if type(value) is int:
+        if type(value) != int:
             raise TypeError(f"{name} must be an integer")
         if value < 0:
             raise ValueError(f"{name} must be >= 0")
