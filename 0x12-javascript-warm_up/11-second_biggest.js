@@ -1,9 +1,10 @@
 #!/usr/bin/node
 // Print second biggest digit
-let argList = process.argv.slice(2);
+let argList = process.argv.slice(2).map(Number);
 argList = argList.sort();
 if (argList.length < 2) {
   console.log(0);
 } else {
-  console.log(argList[argList.length - 2]);
+  argList.sort((a, b) => b - a);
+  console.log(argList[1]);
 }
